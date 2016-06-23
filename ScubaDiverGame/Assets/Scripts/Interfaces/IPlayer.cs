@@ -1,11 +1,8 @@
-﻿using System;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
     interface IPlayer
     {
-        void Move(int speed);
-        void Jump(int jumpLenght);
-
+        void Move(float speed);
+        //void Jump(int jumplength);
     }
 }
