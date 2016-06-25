@@ -83,15 +83,5 @@ public class PlayerController : MonoBehaviour, IPlayer, IGameObject
     }
 
     //apply physics
-    public void FixedUpdate()
-    {
-        //Move(movementSpeed);
-        //if (isClicked)
-        //{
-        //    Console.WriteLine("Clicked");
-        //    Jump(jumpLenght);
-        //    isClicked = false;
-        //}
-    }
 
 }
