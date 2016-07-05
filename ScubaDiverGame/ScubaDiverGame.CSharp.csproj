@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.3.5f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -72,9 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundScroll.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Fish.cs" />
-    <Compile Include="Assets\Scripts\GameEngine.cs" />
+    <Compile Include="Assets\Scripts\Fishes\BoneFish.cs" />
+    <Compile Include="Assets\Scripts\Fishes\Squid.cs" />
+    <Compile Include="Assets\Scripts\Fishes\UrchinFish.cs" />
+    <Compile Include="Assets\Scripts\GameEngine\EnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\GameEngine\GameEngine.cs" />
+    <Compile Include="Assets\Scripts\GameEngine\IEnemyFactory.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IGameObject.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlayer.cs" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Assets.Scripts.Interfaces
 {
-    interface IEnemy
+    public interface IEnemy
     {
          void Attack(float damage, float speed);
     }

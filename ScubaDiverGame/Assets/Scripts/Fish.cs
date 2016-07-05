@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Interfaces;
 using System;
+using System.Collections;
 using UnityEngine;
 
 
@@ -13,21 +14,32 @@ namespace Assets.Scripts
 
         private float x;
         private float y;
-        public const float startingPos = 5;
+        private float scaleZ;
+        
+        public const float startingPos = 10;
         private const float fishDmg = 3;
 
-        System.Random rand = new System.Random();
 
+        //Constructor
+        public Fish(GameObject obj) : base(obj)
+        {
+            this.X = StartingPos;
+            this.Obj = obj;
+
+            this.Possition = new Vector3(this.X, this.Y, -1);
+            this.Obj.transform.position = this.Possition;
+
+            this.Scale = new Vector3(1, 1, ScaleZ);
+            this.Obj.transform.localScale = this.Scale;
+
+            this.Rb = obj.GetComponent<Rigidbody2D>();
+        }
 
 
         //Properties
         public static float StartingPos
         {
             get { return startingPos; }
-        }
-        public float FishDmg
-        {
-            get { return Dmg; }
         }
         public float X
         {
@@ -36,69 +48,43 @@ namespace Assets.Scripts
         }
         public float Y
         {
-            get { return float.Parse((rand.Next(-3, 3) * rand.NextDouble()).ToString()); }
-            private set
-            {
-                if (value > 3 || value < -3)
-                {
-                    throw new InvalidProgramException("Cannot Generate Enemy Outside the bounds of the camera");
-                }
-                else
-                {
-                    this.y = value;
-                }
-            }
+            get { return float.Parse((Rand.Next(-3, 5) * Rand.NextDouble()).ToString()); }
+            private set { this.y = value; }
         }
-
-
-
-        //Constructor
-        public Fish(GameObject obj) : base(obj)
+        public float ScaleZ
         {
-            this.X = StartingPos;
-            this.Obj = obj;
-            this.Possition = new Vector3(this.X, this.Y, -1);
-            this.Obj.transform.position = this.Possition;
-            this.Rb = Obj.GetComponent<Rigidbody2D>();
+            get { return float.Parse((Rand.Next(3, 6) * Rand.NextDouble()).ToString()); }
+            private set { this.scaleZ = value; }
         }
+
+
+
 
 
         //Methods
-
-        public static Fish CreateRandomFish(GameObject prefab)
+        public void Move(float speed)
         {
-            var temp = new Fish(Instantiate(prefab) as GameObject);
-            
-            return temp;
-
-        }
-
-        public void MoveForward()
-        {
-
-        }
-
-        //Unity Methods
-        public  void Start()
-        {
-
-            urchinPrefab = Resources.Load("UrchinFish") as GameObject;
-        }
-        public void Update()
-        {
-            Debug.Log("ataka");
-            var obj = gameObject;//GameEngine.FindObjectOfType<Fish>();
+            var obj = gameObject;
             var pos = obj.transform.position;
-            pos.x = obj.transform.position.x - 0.01f;
+            pos.x = obj.transform.position.x - speed;
             obj.transform.position = pos;
         }
+        public IEnumerator Charge()
+        {
+            yield return new WaitForSeconds(2);
+
+        }
+
+
+
+        //Unity Methods
 
         private void Attack()
         {
-           //  var obj = GameEngine.FindObjectOfType<Fish>();
-           // var pos = obj.transform.position;
-           // pos.x = obj.transform.position.x - 0.002f;
-           // obj.transform.position = pos;
+            //  var obj = GameEngine.FindObjectOfType<Fish>();
+            // var pos = obj.transform.position;
+            // pos.x = obj.transform.position.x - 0.002f;
+            // obj.transform.position = pos;
         }
     }
 }

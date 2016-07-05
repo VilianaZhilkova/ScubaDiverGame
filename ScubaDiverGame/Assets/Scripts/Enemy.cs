@@ -9,44 +9,56 @@ namespace Assets.Scripts
 {
     public enum Enemies
     {
-        
+
     }
-    public abstract class Enemy : MonoBehaviour , IEnemy
+    public abstract class Enemy : MonoBehaviour, IEnemy
     {
         //Fields
         private GameObject obj;
-        private  Rigidbody2D rb;
-        private  Vector2 possiton;
-        private float dmg;
+        private Rigidbody2D rb;
+        private Vector2 possiton;
+        private Vector3 scale;
+        private Animator anim;
+        private static System.Random rand = new System.Random();
 
 
 
         //Props
-        public float Dmg
-        {
-            get;set;
-        }
 
-        public  Vector2 Possition
+        public Vector2 Possition
         {
-            get;set;
+            get; set;
         }
         public Rigidbody2D Rb
         {
-            get;set;
+            get { return this.rb; }
+            set { this.rb = value; }
         }
         public GameObject Obj
         {
-            get;set;
+            get; set;
         }
-       
+        public Vector3 Scale
+        {
+            get; set;
+        }
+        public Animator Anim
+        {
+            get; set;
+        }
+        public System.Random Rand
+        {
+            get { return rand; }
+            private set { rand = value; }
+        }
+
 
         //Constructor
-       
+
 
         public Enemy(GameObject obj) : base()
         {
-           // Debug.Log(Rb.transform.position.x);
+            // Debug.Log(Rb.transform.position.x);
         }
 
 
@@ -60,6 +72,6 @@ namespace Assets.Scripts
 
             //this.rb.AddForce(new Vector2(-speed, 0));
         }
-        
+
     }
 }
