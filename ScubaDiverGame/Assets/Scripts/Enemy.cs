@@ -36,7 +36,8 @@ namespace Assets.Scripts
         }
         public GameObject Obj
         {
-            get; set;
+            get { return this.obj; }
+            set { this.obj = value; }
         }
         public Vector3 Scale
         {

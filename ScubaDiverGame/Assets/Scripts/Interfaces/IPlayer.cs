@@ -2,7 +2,7 @@
 {
     interface IPlayer
     {
-        void Move(float speed);
+       //TODO
         //void Jump(int jumplength);
     }
 }

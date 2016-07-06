@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Assets.Scripts.Interfaces;
+using Assets.Scripts.Player;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
 
-    public  class EnemyFactory : MonoBehaviour
+    public  class ObjectFactory : MonoBehaviour
     {
         private static System.Random rand = new System.Random();
         //Fishes
@@ -16,9 +17,14 @@ namespace Assets.Scripts
         private static GameObject bonePrefab;
         private static GameObject squidPrefab;
         private static List<GameObject> fishEnemies;
-        //
+        //Bullet
+        private static GameObject bullet;
+        
 
-
+        public static Bullet CreateBullet(Vector3 pos)
+        {
+            return new Bullet(Instantiate(bullet,pos,new Quaternion()) as GameObject);
+        }
 
         public static IEnemy CreateRandomFish()
         {
@@ -43,6 +49,9 @@ namespace Assets.Scripts
             urchinPrefab = (Resources.Load("UrchinFish") as GameObject);
             bonePrefab = (Resources.Load("BoneFish") as GameObject);
             squidPrefab = (Resources.Load("Squid") as GameObject);
+
+            //load Bullet
+            bullet = (Resources.Load("Bullet") as GameObject);
             fishEnemies = new List<GameObject> { urchinPrefab, bonePrefab,squidPrefab };
         }
 

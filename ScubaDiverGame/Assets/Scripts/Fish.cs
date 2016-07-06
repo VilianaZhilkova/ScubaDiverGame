@@ -69,22 +69,7 @@ namespace Assets.Scripts
             pos.x = obj.transform.position.x - speed;
             obj.transform.position = pos;
         }
-        public IEnumerator Charge()
-        {
-            yield return new WaitForSeconds(2);
-
-        }
 
 
-
-        //Unity Methods
-
-        private void Attack()
-        {
-            //  var obj = GameEngine.FindObjectOfType<Fish>();
-            // var pos = obj.transform.position;
-            // pos.x = obj.transform.position.x - 0.002f;
-            // obj.transform.position = pos;
-        }
     }
 }

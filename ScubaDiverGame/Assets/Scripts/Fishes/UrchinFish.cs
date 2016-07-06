@@ -37,8 +37,7 @@ namespace Assets.Scripts.Fishes
         {
             yield return new WaitForSeconds(1);
             angryNumber = Rand.Next(40, 50);
-            Debug.Log(angryNumber);
-            if (true)
+            if (angryNumber == 42)
             {
                 this.moveSpeed = 0;
                 Anim.SetBool("IsAngry", true);
@@ -53,6 +52,7 @@ namespace Assets.Scripts.Fishes
         {
             Move(moveSpeed);
         }
+
         public void Start()
         {
             this.moveSpeed = 0.04f;

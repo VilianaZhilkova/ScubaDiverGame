@@ -56,7 +56,7 @@ namespace Assets.Scripts
             while (true)
             {
                 yield return new WaitForSeconds(2);
-                var temp = EnemyFactory.CreateRandomFish();
+                var temp = ObjectFactory.CreateRandomFish();
             }
         }
     }

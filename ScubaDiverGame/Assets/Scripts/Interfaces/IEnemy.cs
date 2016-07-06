@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 namespace Assets.Scripts.Interfaces
 {
-    public interface IEnemy
+    public interface IEnemy 
     {
-         void Attack(float damage, float speed);
+         //TODO:
     }
 }
