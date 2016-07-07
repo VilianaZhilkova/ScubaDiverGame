@@ -71,23 +71,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BackgroundScroll.cs" />
-    <Compile Include="Assets\Scripts\Walls_And_Regulations\BulletDestroyer.cs" />
-    <Compile Include="Assets\Scripts\Walls_And_Regulations\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Fishes\Boss.cs" />
+    <Compile Include="Assets\Scripts\Walls_And_Regulations\BackgroundScroll.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Fish.cs" />
+    <Compile Include="Assets\Scripts\Fishes\Fish.cs" />
     <Compile Include="Assets\Scripts\Fishes\BoneFish.cs" />
-    <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Fishes\Squid.cs" />
     <Compile Include="Assets\Scripts\Fishes\UrchinFish.cs" />
-    <Compile Include="Assets\Scripts\GameEngine\ObjectFactory.cs" />
     <Compile Include="Assets\Scripts\GameEngine\GameEngine.cs" />
     <Compile Include="Assets\Scripts\GameEngine\IEnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\GameEngine\ObjectFactory.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IGameObject.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlayer.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Walls_And_Regulations\BulletDestroyer.cs" />
+    <Compile Include="Assets\Scripts\Walls_And_Regulations\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Walls_And_Regulations\SliderController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Diagram.cd" />

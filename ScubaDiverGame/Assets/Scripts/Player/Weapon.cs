@@ -8,7 +8,7 @@ namespace Assets.Scripts.Player
 {
     public class Weapon : MonoBehaviour
     {
-        public float fireRate = 0.5F;
+        public float fireRate = 1F;
         private float nextFire = 0.0F;
 
         public void Shoot(GameObject shooter)

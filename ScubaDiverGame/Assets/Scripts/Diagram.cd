@@ -4,21 +4,13 @@
     <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\BackgroundScroll.cs</FileName>
+      <FileName>Assets\Scripts\Walls_And_Regulations\BackgroundScroll.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="PlayerController" Collapsed="true">
-    <Position X="8.25" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ADQAAAAAAqAAAAAAAAAAAAEAAAAAAAAIAAABADAAAAA=</HashCode>
-      <FileName>Assets\Scripts\PlayerController.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Assets.Scripts.Enemy">
     <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAIAEAAAABAAAAIAACAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>gAAAAIAAAAAAIAAEACIABAACAIAACAAAAQAAAAEEAAA=</HashCode>
       <FileName>Assets\Scripts\Enemy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -26,14 +18,14 @@
   <Class Name="Assets.Scripts.Fish">
     <Position X="6.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAABIAAAiAAAAoAAAAAAAAAAAFAAAAAQABhAkAQYAA=</HashCode>
-      <FileName>Assets\Scripts\Fish.cs</FileName>
+      <HashCode>ABAAAAAAAIAAAAIAAAIAAAACAAAAAAAAQABhAEAAYAA=</HashCode>
+      <FileName>Assets\Scripts\Fishes\Fish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Assets.Scripts.Interfaces.IEnemy" Collapsed="true">
     <Position X="10.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IEnemy.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -47,7 +39,7 @@
   <Interface Name="Assets.Scripts.IPlayer" Collapsed="true">
     <Position X="10.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IPlayer.cs</FileName>
     </TypeIdentifier>
   </Interface>

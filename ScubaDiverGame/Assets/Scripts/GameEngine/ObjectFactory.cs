@@ -17,8 +17,12 @@ namespace Assets.Scripts
         private static GameObject bonePrefab;
         private static GameObject squidPrefab;
         private static List<GameObject> fishEnemies;
+
         //Bullet
         private static GameObject bullet;
+
+        //Boss
+        private static GameObject bossPrefab;
         
 
         public static Bullet CreateBullet(Vector3 pos)
@@ -43,8 +47,16 @@ namespace Assets.Scripts
             throw new NotImplementedException();
         }
 
+        public static IEnemy CreateBoss()
+        {
+            return new Boss(Instantiate(bossPrefab));
+        }
+
         public void Start()
         {
+            //LoadBoss
+            bossPrefab = (Resources.Load("BOSS") as GameObject);
+
             //LoadFishes
             urchinPrefab = (Resources.Load("UrchinFish") as GameObject);
             bonePrefab = (Resources.Load("BoneFish") as GameObject);

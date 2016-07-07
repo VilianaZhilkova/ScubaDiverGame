@@ -17,7 +17,6 @@ namespace Assets.Scripts.Player
         private float minY = -3.1f;
         private bool facingRight;
         private bool didPressSpace;
-        private GameObject Bullet;
         private Weapon weap;
 
         public void Start()

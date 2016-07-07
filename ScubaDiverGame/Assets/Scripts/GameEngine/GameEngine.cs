@@ -6,14 +6,18 @@ using System.Text;
 using UnityEngine;
 using Assets.Scripts.Interfaces;
 using Assets.Scripts;
+using Assets.Scripts.Walls_And_Regulations;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
+
     class GameEngine : MonoBehaviour
     {
         //Fields
         private static GameObject player;
-        private GameObject obj;
+        private static SliderController slider;
+        private bool reachedBoss = false;
         //Properties
         public GameObject Player
         {
@@ -41,23 +45,33 @@ namespace Assets.Scripts
         //Unity Methods
         public void Start()
         {
+            slider = new SliderController();
             Player = GameObject.FindGameObjectWithTag("Player");
             StartCoroutine(LoadEnemies());
         }
+
         public void Update()
         {
-
+            if (slider.Progress >0.8f && reachedBoss == false)
+            {
+                reachedBoss = true;
+                LoadBoss();
+            }
         }
 
 
         //Methods
         private IEnumerator LoadEnemies()
         {
-            while (true)
+            while (!reachedBoss)
             {
                 yield return new WaitForSeconds(2);
                 var temp = ObjectFactory.CreateRandomFish();
             }
+        }
+        private void LoadBoss()
+        {
+            var temp = ObjectFactory.CreateBoss();
         }
     }
 }

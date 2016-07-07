@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Assets.Scripts;
 using Assets.Scripts.Interfaces;
+using System.Collections;
 
 namespace Assets.Scripts
 {
@@ -19,6 +20,7 @@ namespace Assets.Scripts
         private Vector2 possiton;
         private Vector3 scale;
         private Animator anim;
+        private double switchTime = 2f;
         private static System.Random rand = new System.Random();
 
 
@@ -59,12 +61,18 @@ namespace Assets.Scripts
 
         public Enemy(GameObject obj) : base()
         {
-            // Debug.Log(Rb.transform.position.x);
+
         }
 
+        public void Move(float speed)
+        {
 
-
-
+            var obj = gameObject;
+            var pos = obj.transform.position;
+            pos.x = obj.transform.position.x - speed;
+            obj.transform.position = pos;
+        }
+       
 
         //Unity Methods
 
