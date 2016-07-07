@@ -16,7 +16,7 @@ namespace Assets.Scripts.Player
             if (Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
-                var possition = new Vector3(shooter.transform.position.x, shooter.transform.position.y, 0);
+                var possition = new Vector3(shooter.transform.position.x + 1, shooter.transform.position.y, 0);
                 var bullet = ObjectFactory.CreateBullet(possition);
             }
 
