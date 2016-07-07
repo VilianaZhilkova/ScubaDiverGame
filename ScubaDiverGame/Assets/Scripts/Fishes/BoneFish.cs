@@ -15,7 +15,6 @@ namespace Assets.Scripts.Fishes
 
         public BoneFish(GameObject obj) : base(obj)
         {
-
         }
 
         //Constructor
@@ -31,7 +30,7 @@ namespace Assets.Scripts.Fishes
 
 
         //UnityMethods
-        public void Update()
+        public new void  Update()
         {
             Move(MoveSpeed);
         }

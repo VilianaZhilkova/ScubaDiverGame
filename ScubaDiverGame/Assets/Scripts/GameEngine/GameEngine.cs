@@ -52,7 +52,7 @@ namespace Assets.Scripts
 
         public void Update()
         {
-            if (slider.Progress >0.8f && reachedBoss == false)
+            if (slider.Progress >0.1f && reachedBoss == false)
             {
                 reachedBoss = true;
                 LoadBoss();

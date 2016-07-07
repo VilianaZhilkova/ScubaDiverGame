@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using Assets.Scripts.Interfaces;
 using Assets.Scripts.Player;
+using Assets.Scripts.Player.Bullets;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
 
-    public  class ObjectFactory : MonoBehaviour
+    public class ObjectFactory : MonoBehaviour
     {
         private static System.Random rand = new System.Random();
         //Fishes
@@ -20,14 +21,19 @@ namespace Assets.Scripts
 
         //Bullet
         private static GameObject bullet;
+        private static GameObject specialBullet;
 
         //Boss
         private static GameObject bossPrefab;
-        
 
-        public static Bullet CreateBullet(Vector3 pos)
+
+        public static SimpleBullet CreateSimpleBullet(Vector3 pos)
         {
-            return new Bullet(Instantiate(bullet,pos,new Quaternion()) as GameObject);
+            return new SimpleBullet(Instantiate(bullet, pos, new Quaternion()) as GameObject);
+        }
+        public static SpecialBullet CreateSpeshialBullet(Vector3 pos)
+        {
+            return new SpecialBullet(Instantiate(specialBullet, pos, new Quaternion()) as GameObject);
         }
 
         public static IEnemy CreateRandomFish()
@@ -64,7 +70,8 @@ namespace Assets.Scripts
 
             //load Bullet
             bullet = (Resources.Load("Bullet") as GameObject);
-            fishEnemies = new List<GameObject> { urchinPrefab, bonePrefab,squidPrefab };
+            specialBullet = (Resources.Load("SpecialBullet") as GameObject);
+            fishEnemies = new List<GameObject> { urchinPrefab, bonePrefab, squidPrefab };
         }
 
 

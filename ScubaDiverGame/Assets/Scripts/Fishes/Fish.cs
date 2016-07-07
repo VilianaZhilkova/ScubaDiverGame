@@ -19,6 +19,8 @@ namespace Assets.Scripts
         private const float startingPos = 10;
         private const float fishDmg = 3;
 
+        private const  float startingHP = 3;
+
 
         //Constructor
         public Fish(GameObject obj) : base(obj)
@@ -31,8 +33,6 @@ namespace Assets.Scripts
 
             this.Scale = new Vector3(1, 1, ScaleZ);
             this.Obj.transform.localScale = this.Scale;
-
-            this.Rb = obj.GetComponent<Rigidbody2D>();
         }
 
 
@@ -58,6 +58,15 @@ namespace Assets.Scripts
         }
 
         //Methods
-        
+        public override void ApplyDamage(float dmg)
+        {
+            this.Life -= dmg;
+        }
+        public override void Start()
+        {
+            base.Start();
+            this.Life = startingHP;
+        }
+
     }
 }

@@ -8,10 +8,7 @@ using System.Collections;
 
 namespace Assets.Scripts
 {
-    public enum Enemies
-    {
-
-    }
+    
     public abstract class Enemy : MonoBehaviour, IEnemy
     {
         //Fields
@@ -22,14 +19,21 @@ namespace Assets.Scripts
         private Animator anim;
         private double switchTime = 2f;
         private static System.Random rand = new System.Random();
+        private float life;
 
 
 
         //Props
 
+        public float Life
+        {
+            get { return this.life; }
+            set { this.life = value; }
+        }
         public Vector2 Possition
         {
-            get; set;
+            get { return this.possiton; }
+            set { this.possiton = value; }
         }
         public Rigidbody2D Rb
         {
@@ -47,7 +51,8 @@ namespace Assets.Scripts
         }
         public Animator Anim
         {
-            get; set;
+            get { return this.anim; }
+            set { this.anim = value; }
         }
         public System.Random Rand
         {
@@ -56,30 +61,36 @@ namespace Assets.Scripts
         }
 
 
-        //Constructor
 
+        //Constructor
 
         public Enemy(GameObject obj) : base()
         {
+        }
 
+        public virtual void Start()
+        {
+            this.anim = this.GetComponent<Animator>();
+            this.rb = this.GetComponent<Rigidbody2D>();
         }
 
         public void Move(float speed)
         {
-
             var obj = gameObject;
             var pos = obj.transform.position;
             pos.x = obj.transform.position.x - speed;
             obj.transform.position = pos;
         }
-       
-
         //Unity Methods
 
-        public virtual void Attack(float damage, float speed)
-        {
+        public abstract void ApplyDamage(float dmg);
 
-            //this.rb.AddForce(new Vector2(-speed, 0));
+        public virtual void FixedUpdate()
+        {
+            if(this.life <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
     }

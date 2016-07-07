@@ -29,7 +29,6 @@ namespace Assets.Scripts.Fishes
         public float MoveSpeed
         {
             get { return this.moveSpeed; }
-            set { this.moveSpeed = value; }
         }
 
         //Methods
@@ -45,19 +44,17 @@ namespace Assets.Scripts.Fishes
                 this.moveSpeed = 0.1f;
             }
         }
-
-
         //UnityMethods
-        public void FixedUpdate()
+        public void Update()
         {
             Move(moveSpeed);
         }
 
-        public void Start()
+        public override void Start()
         {
+            base.Start();
             this.moveSpeed = 0.04f;
             StartCoroutine(AngryGenerator());
-            this.Anim = this.GetComponent<Animator>();
         }
     }
 }

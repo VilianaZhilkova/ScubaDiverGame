@@ -15,7 +15,7 @@ namespace Assets.Scripts.Fishes
 
         public Squid(GameObject obj) : base(obj)
         {
-
+            Debug.Log("Made Squid");
         }
 
         //Constructor

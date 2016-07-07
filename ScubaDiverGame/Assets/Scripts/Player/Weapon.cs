@@ -8,19 +8,31 @@ namespace Assets.Scripts.Player
 {
     public class Weapon : MonoBehaviour
     {
-        public float fireRate = 1F;
+        private float fireRate = 1F;
         private float nextFire = 0.0F;
+        private static int killCount = 0;
 
+
+        public static int KillCount
+        {
+            get { return killCount; }
+            internal set { killCount = value; }
+        }
         public void Shoot(GameObject shooter)
         {
             if (Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
                 var possition = new Vector3(shooter.transform.position.x + 1, shooter.transform.position.y, 0);
-                var bullet = ObjectFactory.CreateBullet(possition);
+                if (killCount < 20)
+                {
+                    var bullet = ObjectFactory.CreateSimpleBullet(possition);
+                }
+                else
+                {
+                    var bullet = ObjectFactory.CreateSpeshialBullet(possition);
+                }
             }
-
-
         }
 
     }
