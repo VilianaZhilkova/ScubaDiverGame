@@ -80,6 +80,9 @@
     <Compile Include="Assets\Scripts\GameEngine\GameEngine.cs" />
     <Compile Include="Assets\Scripts\GameEngine\IEnemyFactory.cs" />
     <Compile Include="Assets\Scripts\GameEngine\ObjectFactory.cs" />
+    <Compile Include="Assets\Scripts\HealthBar\BarScript.cs" />
+    <Compile Include="Assets\Scripts\HealthBar\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\HealthBar\Stat.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IGameObject.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlayer.cs" />
@@ -97,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Diagram.cd" />
+    <None Include="Assets\Scripts\HealthBar\BarScript.cs.meta" />
+    <None Include="Assets\Scripts\HealthBar\PlayerHealth.cs.meta" />
+    <None Include="Assets\Scripts\HealthBar\Stat.cs.meta" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
