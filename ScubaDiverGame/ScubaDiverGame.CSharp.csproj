@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.3.5f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -88,8 +86,8 @@
     <Compile Include="Assets\Scripts\Interfaces\IPlayer.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Player\Bullets\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Player\Bullets\SimpleBullet.cs" />
     <Compile Include="Assets\Scripts\Player\Bullets\IBullet.cs" />
+    <Compile Include="Assets\Scripts\Player\Bullets\SimpleBullet.cs" />
     <Compile Include="Assets\Scripts\Player\Bullets\SpecialBullet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
@@ -100,9 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Diagram.cd" />
-    <None Include="Assets\Scripts\HealthBar\BarScript.cs.meta" />
-    <None Include="Assets\Scripts\HealthBar\PlayerHealth.cs.meta" />
-    <None Include="Assets\Scripts\HealthBar\Stat.cs.meta" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
