@@ -115,11 +115,6 @@ namespace Assets.Scripts
             {
                 updateHealhBar = true;
                 
-            //  this.Speed = 0;
-            // this.gameObject.GetComponent<Animator>().SetBool("didExplode", true);
-          //  col.SendMessage("ApplyDamage", 2);
-           // Destroy(this.gameObject, 0.2f);
-            // KillCount += 1;
             }
         }
 
