@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+    bool isMute;
+
 	public void PlayButton()
     {
         SceneManager.LoadScene("ScubaDiverGame");
@@ -16,6 +18,7 @@ public class MainMenu : MonoBehaviour {
 
     public void MuteSounds()
     {
-        Debug.Log("Sounds muted");
+        isMute = !isMute;
+        AudioListener.volume = isMute ? 0 : 1;
     }
 }
