@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
     public void UpdateStat(float dmg)
     {
         this.health.CurrentValue -= dmg;
+
     }
 
     public void CheckForEnd()
@@ -32,6 +33,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             //TODO end game
             Debug.Log("Game ended....");
+            Application.LoadLevel("GameOver");
         }
     }
     
