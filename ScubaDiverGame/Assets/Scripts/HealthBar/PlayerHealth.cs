@@ -25,5 +25,14 @@ public class PlayerHealth : MonoBehaviour {
     {
         this.health.CurrentValue -= dmg;
     }
+
+    public void CheckForEnd()
+    {
+        if (this.health.CurrentValue<=0)
+        {
+            //TODO end game
+            Debug.Log("Game ended....");
+        }
+    }
     
 }

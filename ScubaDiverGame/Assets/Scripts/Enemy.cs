@@ -21,7 +21,7 @@ namespace Assets.Scripts
         private static System.Random rand = new System.Random();
         private float life;
         private bool updateHealhBar = false;
-        private PlayerHealth health;
+        GameObject health;
 
         //Props
 
@@ -73,7 +73,8 @@ namespace Assets.Scripts
         {
             this.anim = this.GetComponent<Animator>();
             this.rb = this.GetComponent<Rigidbody2D>();
-          //  health = GetComponent<PlayerHealth>();
+             health = GameObject.Find("PlayerHealth");
+            //  health = GetComponent<PlayerHealth>();
         }
 
         public void Move(float speed)
@@ -96,9 +97,13 @@ namespace Assets.Scripts
 
             if (updateHealhBar)
             {
-                GameObject go = GameObject.Find("PlayerHealth");
-                go.GetComponent<PlayerHealth>().UpdateStat(2);
-               // health.UpdateStat(2);
+
+                var heathObject = health.GetComponent<PlayerHealth>();
+                heathObject.UpdateStat(2);
+                heathObject.CheckForEnd();
+
+               Destroy(this.gameObject, 0.2f);
+
                 updateHealhBar = false;
 
             }
