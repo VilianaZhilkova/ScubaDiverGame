@@ -25,8 +25,11 @@ namespace Assets.Scripts
 
         //Boss
         private static GameObject bossPrefab;
+        private static GameObject bossAttack1;
+        private static GameObject bossAttack2;
+        private static GameObject bossAttack3;
 
-
+        //Bullets Creation
         public static SimpleBullet CreateSimpleBullet(Vector3 pos)
         {
             return new SimpleBullet(Instantiate(bullet, pos, new Quaternion()) as GameObject);
@@ -36,23 +39,25 @@ namespace Assets.Scripts
             return new SpecialBullet(Instantiate(specialBullet, pos, new Quaternion()) as GameObject);
         }
 
+        //Enemies Creaation
         public static IEnemy CreateRandomFish()
         {
             var fishRNG = rand.Next(0, 3);
             var temp = new Fish(Instantiate(fishEnemies[fishRNG]) as GameObject);
             return temp;
         }
-
-        public IEnemy CreateRandom(GameObject prefab)
+        public static IEnemy FirstAttack()
         {
-            throw new NotImplementedException();
+            return new Fish(Instantiate(bossAttack3) as GameObject);
         }
-
-        public IEnemy CreateBubbleFish(GameObject prefab)
+        public static IEnemy SecondAttack()
         {
-            throw new NotImplementedException();
+            return new Fish(Instantiate(bossAttack2) as GameObject);
         }
-
+        public static IEnemy LastAttack()
+        {
+            return new Fish(Instantiate(bossAttack1) as GameObject);
+        }
         public static IEnemy CreateBoss()
         {
             return new Boss(Instantiate(bossPrefab));
@@ -62,6 +67,9 @@ namespace Assets.Scripts
         {
             //LoadBoss
             bossPrefab = (Resources.Load("BOSS") as GameObject);
+            bossAttack1 = (Resources.Load("bossAttack1") as GameObject);
+            bossAttack2 = (Resources.Load("bossAttack2") as GameObject);
+            bossAttack3 = (Resources.Load("bossAttack3") as GameObject);
 
             //LoadFishes
             urchinPrefab = (Resources.Load("UrchinFish") as GameObject);
