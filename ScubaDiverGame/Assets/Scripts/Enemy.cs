@@ -20,8 +20,8 @@ namespace Assets.Scripts
         private double switchTime = 2f;
         private static System.Random rand = new System.Random();
         private float life;
-
-
+        private bool updateHealhBar = false;
+        private PlayerHealth health;
 
         //Props
 
@@ -66,12 +66,14 @@ namespace Assets.Scripts
 
         public Enemy(GameObject obj) : base()
         {
+            
         }
 
         public virtual void Start()
         {
             this.anim = this.GetComponent<Animator>();
             this.rb = this.GetComponent<Rigidbody2D>();
+          //  health = GetComponent<PlayerHealth>();
         }
 
         public void Move(float speed)
@@ -90,6 +92,29 @@ namespace Assets.Scripts
             if(this.life <= 0)
             {
                 Destroy(this.gameObject);
+            }
+
+            if (updateHealhBar)
+            {
+                GameObject go = GameObject.Find("PlayerHealth");
+                go.GetComponent<PlayerHealth>().UpdateStat(2);
+               // health.UpdateStat(2);
+                updateHealhBar = false;
+
+            }
+        }
+
+        public void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.tag == "Player")
+            {
+                updateHealhBar = true;
+                
+            //  this.Speed = 0;
+            // this.gameObject.GetComponent<Animator>().SetBool("didExplode", true);
+          //  col.SendMessage("ApplyDamage", 2);
+           // Destroy(this.gameObject, 0.2f);
+            // KillCount += 1;
             }
         }
 

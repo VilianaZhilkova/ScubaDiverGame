@@ -39,9 +39,17 @@ namespace Assets.Scripts.Player
             }
         }
 
-       
+
+
+        public void ApplyDamage(float dmg)
+        {
+            
+        }
+
 
         //Methods
+
+
         private void Move(float speed, float horizontal, float vertical)
         {
 
@@ -84,6 +92,9 @@ namespace Assets.Scripts.Player
             float vertical = Input.GetAxis("Vertical");
             return new float[] { horizontal, vertical };
         }
+
+
+        
 
     }
 }

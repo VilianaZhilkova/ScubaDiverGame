@@ -15,11 +15,15 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	public void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            health.CurrentValue -= 2;
-        }
+       
 	}
+
+
+    public void UpdateStat(float dmg)
+    {
+        this.health.CurrentValue -= dmg;
+    }
+    
 }

@@ -27,6 +27,7 @@ namespace Assets.Scripts.Player.Bullets
             pos.x = obj.transform.position.x + this.Speed;
             obj.transform.position = pos;
         }
+
         public void OnTriggerEnter2D(Collider2D col)
         {
             if (col.tag == "Enemy")
