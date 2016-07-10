@@ -1,9 +1,14 @@
 ﻿namespace Assets.Scripts.Interfaces
 {
-    interface  IGameObject
+    using UnityEngine;
+
+    public interface  IGameObject
     {        
-        //void Start();
-        void Update();
-        //void FixedUpdate();  
+        GameObject Obj { get; }
+        Rigidbody2D Rb { get; }
+        Vector3 Possition { get; }
+        Vector3 Scale { get; }
+        Animator Anim { get; }
+
     }
 }

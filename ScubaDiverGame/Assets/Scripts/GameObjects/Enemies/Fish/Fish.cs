@@ -9,7 +9,6 @@ namespace Assets.Scripts
     public class Fish : Enemy
     {
         //Fields
-        private static GameObject urchinPrefab;
         private static Quaternion quat = new Quaternion();
 
         private float x;
@@ -49,7 +48,7 @@ namespace Assets.Scripts
         }
         public float Y
         {
-            get { return float.Parse((Rand.Next(-3, 5) * Rand.NextDouble()).ToString()); }
+            get { return float.Parse((Rand.Next(-4, 4) * Rand.NextDouble()).ToString()); }
             private set { this.y = value; }
         }
         public float ScaleZ

@@ -5,8 +5,10 @@ using System.Text;
 using UnityEngine;
 namespace Assets.Scripts.Interfaces
 {
-    public interface IEnemy 
+    public interface IEnemy
     {
-         //TODO:
+        float Life { get; set; }
+        void Move(float speed);
+        void ApplyDamage(float dmg);
     }
 }

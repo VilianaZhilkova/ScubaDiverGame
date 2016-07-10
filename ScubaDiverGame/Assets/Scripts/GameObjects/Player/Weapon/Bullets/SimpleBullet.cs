@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player.Bullets
 {
-    public class SimpleBullet : Bullet
+    public class SimpleBullet : Bullet, IBullet
     {
         //fields
         private const float dmg = 3;
@@ -18,28 +18,32 @@ namespace Assets.Scripts.Player.Bullets
             
         }
         //properties
-
+       
         //UnityMethods
         public void Update()
         {
-            var obj = gameObject;
-            var pos = obj.transform.position;
-            pos.x = obj.transform.position.x + this.Speed;
-            obj.transform.position = pos;
+            Move();
         }
 
         public void OnTriggerEnter2D(Collider2D col)
         {
             if (col.tag == "Enemy")
             {
-                Debug.Log("Kill Count: "+KillCount);
+                this.KillCount += 1;
+                Debug.Log("Kill Count: "+this.KillCount);
                 this.Speed = 0;
                 this.gameObject.GetComponent<Animator>().SetBool("didExplode", true);
                 col.SendMessage("ApplyDamage", dmg);
                 Destroy(this.gameObject,0.2f);
-                KillCount += 1;
             }
         }
 
+        public  void Move()
+        {
+            var obj = this.gameObject;
+            var pos = obj.transform.position;
+            pos.x = obj.transform.position.x + this.Speed;
+            obj.transform.position = pos;
+        }
     }
 }

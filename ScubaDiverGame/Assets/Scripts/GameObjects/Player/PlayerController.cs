@@ -3,10 +3,11 @@ using Assets.Scripts;
 using System;
 using Assets.Scripts.Interfaces;
 using System.Collections;
+using Assets.Scripts.GameObjects;
 
 namespace Assets.Scripts.Player
 {
-    public class PlayerController : MonoBehaviour, IPlayer, IGameObject
+    public class PlayerController : MonoBehaviour, IPlayer
     {
         //effectively public
         [SerializeField]
@@ -17,40 +18,36 @@ namespace Assets.Scripts.Player
         private float minY = -3.1f;
         private bool facingRight;
         private bool didPressSpace;
-        private Weapon weap;
+        private static Weapon weap;
+
+        public Weapon Weapon
+        {
+            get { return weap; }
+            set { weap = value; }
+        }
 
         public void Start()
         {
             facingRight = true;
-            this.weap = new Weapon();
+            weap = new Weapon();
         }
 
         //read input / change graphics
         public void Update()
         {
-            
-            float[] horizontalAndVertical = GetHorizontalAndVertival();
+
+            float[] horizontalAndVertical = GetHorizontalAndVertical();
             Move(movementSpeed, horizontalAndVertical[0], horizontalAndVertical[1]);
             Flip(horizontalAndVertical[0]);
             didPressSpace = Input.GetButtonDown("Jump");
             if (didPressSpace)
             {
-                this.weap.Shoot(this.gameObject);
+                weap.Shoot(this.gameObject);
             }
         }
 
-
-
-        public void ApplyDamage(float dmg)
-        {
-            
-        }
-
-
         //Methods
-
-
-        private void Move(float speed, float horizontal, float vertical)
+        public void Move(float speed, float horizontal, float vertical)
         {
 
             this.transform.Translate(speed * Time.deltaTime * horizontal, 0, 0);
@@ -75,7 +72,7 @@ namespace Assets.Scripts.Player
             }
         }
 
-        private void Flip(float horizontal)
+        public void Flip(float horizontal)
         {
             if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight))
             {
@@ -86,7 +83,7 @@ namespace Assets.Scripts.Player
             }
         }
 
-        private float[] GetHorizontalAndVertival()
+        public float[] GetHorizontalAndVertical()
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
@@ -94,7 +91,7 @@ namespace Assets.Scripts.Player
         }
 
 
-        
+
 
     }
 }

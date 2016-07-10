@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using Assets.Scripts.Player;
 
 public class PlayerHealth : MonoBehaviour {
     [SerializeField]
@@ -31,9 +33,11 @@ public class PlayerHealth : MonoBehaviour {
     {
         if (this.health.CurrentValue<=0)
         {
+            var player = new PlayerController();
+            player.Weapon.KillCount = 0;
             //TODO end game
             Debug.Log("Game ended....");
-            Application.LoadLevel("GameOver");
+            SceneManager.LoadScene("GameOver");
         }
     }
     

@@ -11,14 +11,12 @@ namespace Assets.Scripts.Fishes
         //Fields
         //TODO: MAKE PRIVATECONST!;
         private const float moveSpeed = 0.08f;
-        public int demage;
 
+        //Constructor
         public BoneFish(GameObject obj) : base(obj)
         {
         }
-
-        //Constructor
-
+        
 
         //Properties
         public float MoveSpeed

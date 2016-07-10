@@ -6,31 +6,27 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player.Bullets
 {
-    public abstract class Bullet : Weapon
+    public abstract class Bullet : Weapon, IBullet
     {
         private GameObject obj;
-        private static float speed = 0.2f;
+        private static float speed;
         private float dmg;
 
-        public Bullet(GameObject obj)
+        public Bullet(GameObject obj) 
         {
             this.obj = obj;
-        }
-        public GameObject Obj
-        {
-            get { return this.obj; }
         }
         public float Speed
         {
             get { return speed; }
-            set { speed = value; }
+            protected set { speed = value; }
         }
         public float Damage
         {
             get { return this.dmg; }
-            internal set { this.dmg = value; }
+            protected set { this.dmg = value; }
         }
-        public void Start()
+        public new void Start()
         {
             speed = 0.2f;
         }

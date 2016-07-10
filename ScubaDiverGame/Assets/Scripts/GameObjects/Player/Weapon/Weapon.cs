@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.GameObjects;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,17 @@ namespace Assets.Scripts.Player
     {
         private float fireRate = 1F;
         private float nextFire = 0.0F;
-        private static int killCount = 0;
+        private static int killCount;
+
+        public Weapon()
+        {
+        }
 
 
-        public static int KillCount
+        public int KillCount
         {
             get { return killCount; }
-            internal set { killCount = value; }
+            set { killCount = value; }
         }
         public void Shoot(GameObject shooter)
         {
@@ -33,6 +38,10 @@ namespace Assets.Scripts.Player
                     var bullet = ObjectFactory.CreateSpeshialBullet(possition);
                 }
             }
+        }
+        public void Start()
+        {
+            killCount = 0;
         }
 
     }

@@ -1,8 +1,9 @@
-﻿namespace Assets.Scripts
+﻿namespace Assets.Scripts.Interfaces
 {
-    interface IPlayer
+    public interface IPlayer 
     {
-       //TODO
-        //void Jump(int jumplength);
+        void Move(float speed, float horizontal, float vertical);
+        void Flip(float horizontal);
+        float[] GetHorizontalAndVertical();
     }
 }

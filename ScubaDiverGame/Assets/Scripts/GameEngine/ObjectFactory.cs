@@ -30,11 +30,11 @@ namespace Assets.Scripts
         private static GameObject bossAttack3;
 
         //Bullets Creation
-        public static SimpleBullet CreateSimpleBullet(Vector3 pos)
+        public static IBullet CreateSimpleBullet(Vector3 pos)
         {
             return new SimpleBullet(Instantiate(bullet, pos, new Quaternion()) as GameObject);
         }
-        public static SpecialBullet CreateSpeshialBullet(Vector3 pos)
+        public static IBullet CreateSpeshialBullet(Vector3 pos)
         {
             return new SpecialBullet(Instantiate(specialBullet, pos, new Quaternion()) as GameObject);
         }

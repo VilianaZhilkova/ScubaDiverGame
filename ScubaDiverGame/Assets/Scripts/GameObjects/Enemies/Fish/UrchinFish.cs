@@ -10,40 +10,20 @@ namespace Assets.Scripts.Fishes
     public class UrchinFish : Fish
     {
         //Fields
-        //TODO: MAKE PRIVATECONST!;
-
-        //TODO: FIX CONSTANTS!
-        private float moveSpeed;
-        public int demage;
+        private static float moveSpeed = 0.04f;
         private int angryNumber;
-
-
 
         //Constructor
         public UrchinFish(GameObject obj) : base(obj)
         {
 
         }
-
         //Properties
         public float MoveSpeed
         {
-            get { return this.moveSpeed; }
+            get { return moveSpeed; }
         }
-
-        //Methods
-        public IEnumerator AngryGenerator()
-        {
-            yield return new WaitForSeconds(1);
-            angryNumber = Rand.Next(40, 50);
-            if (angryNumber == 42)
-            {
-                this.moveSpeed = 0;
-                Anim.SetBool("IsAngry", true);
-                yield return new WaitForSeconds(1);
-                this.moveSpeed = 0.1f;
-            }
-        }
+       
         //UnityMethods
         public new void Update()
         {
@@ -53,8 +33,21 @@ namespace Assets.Scripts.Fishes
         public override void Start()
         {
             base.Start();
-            this.moveSpeed = 0.04f;
+            moveSpeed = 0.04f;
             StartCoroutine(AngryGenerator());
+        }
+        //Methods
+        public IEnumerator AngryGenerator()
+        {
+            yield return new WaitForSeconds(1);
+            angryNumber = Rand.Next(40, 50);
+            if (angryNumber == 42)
+            {
+                moveSpeed = 0;
+                Anim.SetBool("IsAngry", true);
+                yield return new WaitForSeconds(1);
+                moveSpeed = 0.1f;
+            }
         }
     }
 }

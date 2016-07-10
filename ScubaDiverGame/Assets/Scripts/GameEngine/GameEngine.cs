@@ -52,7 +52,7 @@ namespace Assets.Scripts
 
         public void Update()
         {
-            if (slider.Progress >0.1f && reachedBoss == false)
+            if (slider.Progress >0.7f && reachedBoss == false)
             {
                 reachedBoss = true;
                 LoadBoss();
@@ -65,7 +65,7 @@ namespace Assets.Scripts
         {
             while (!reachedBoss)
             {
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1);
                 var temp = ObjectFactory.CreateRandomFish();
             }
         }

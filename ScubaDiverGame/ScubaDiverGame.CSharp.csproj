@@ -71,15 +71,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GameObjects\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Enemies\Fish\BoneFish.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Enemies\Boss.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Enemies\Fish\Fish.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Enemies\Fish\Squid.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Enemies\Fish\UrchinFish.cs" />
     <Compile Include="Assets\Scripts\GameEngine\GameEngine.cs" />
-    <Compile Include="Assets\Scripts\GameEngine\IEnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IObjectFactory.cs" />
     <Compile Include="Assets\Scripts\GameEngine\ObjectFactory.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\InGameObject.cs" />
     <Compile Include="Assets\Scripts\GUI\HealthBar\BarScript.cs" />
     <Compile Include="Assets\Scripts\GUI\HealthBar\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\GUI\HealthBar\Stat.cs" />
