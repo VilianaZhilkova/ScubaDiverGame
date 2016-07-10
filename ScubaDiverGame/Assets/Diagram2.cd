@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Assets.Scripts.Exceptions.ObjectOutOfScreenException" Collapsed="true">
-    <Position X="7.25" Y="7.25" Width="1.5" />
+    <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Exceptions\ObjectOutOfScreenException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Assets.Scripts.GameEngine" Collapsed="true">
-    <Position X="2" Y="7.25" Width="1.5" />
+    <Position X="2.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACgAAAAAAQAAAAAAAAAAAAABAAAEQQAAAAA=</HashCode>
       <FileName>Assets\Scripts\GameEngine\GameEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Assets.Scripts.ObjectFactory" Collapsed="true">
-    <Position X="5.5" Y="7.25" Width="1.5" />
+    <Position X="5.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQKAAACECAAqACAAAAAAEBoAABAAAABQAAQAABAA=</HashCode>
       <FileName>Assets\Scripts\GameEngine\ObjectFactory.cs</FileName>
@@ -73,68 +73,12 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Assets.Scripts.Player.PlayerController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2" Y="8.25" Width="1.5" />
+    <Position X="2.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ADQAAAAAAKAAIAAAAAAAAAEAAAAAAAgoAAAAQDAQAAA=</HashCode>
       <FileName>Assets\Scripts\GameObjects\Player\PlayerController.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Assets.Scripts.Walls_And_Regulations.BulletDestroyer" Collapsed="true">
-    <Position X="5.5" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\BulletDestroyer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Assets.Scripts.Walls_And_Regulations.SliderController" Collapsed="true">
-    <Position X="5.5" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAABAAAAAAAAAAAAAAAIAEAACAAAA=</HashCode>
-      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\SliderController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Destroyer" Collapsed="true">
-    <Position X="7.25" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\Destroyer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BackgroundScroll" Collapsed="true">
-    <Position X="2" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GUI\BackgroundScroll.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BarScript" Collapsed="true">
-    <Position X="3.75" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQCAQAAADAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GUI\HealthBar\BarScript.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PlayerHealth" Collapsed="true">
-    <Position X="3.75" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAgAAAAEg=</HashCode>
-      <FileName>Assets\Scripts\GUI\HealthBar\PlayerHealth.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Stat" Collapsed="true">
-    <Position X="7.25" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>QAAACAAAAAAAAQAAAAAAAAAAAAAAACAAAAAgAEAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GUI\HealthBar\Stat.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MainMenu" Collapsed="true">
-    <Position X="3.75" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAQAAAAiAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\GUI\MainMenu.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Assets.Scripts.Player.Weapon" Collapsed="true">
     <Position X="12.75" Y="0.5" Width="1.5" />
@@ -167,36 +111,92 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Assets.Scripts.Walls_And_Regulations.BulletDestroyer" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\BulletDestroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.Walls_And_Regulations.SliderController" Collapsed="true">
+    <Position X="5.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAABAAAAAAAAAAAAAAAIAEAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\SliderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Destroyer" Collapsed="true">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\Walls_And_Regulations\Destroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackgroundScroll" Collapsed="true">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\BackgroundScroll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarScript" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAQAAADAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\HealthBar\BarScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth" Collapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAgAAAAEg=</HashCode>
+      <FileName>Assets\Scripts\GUI\HealthBar\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stat" Collapsed="true">
+    <Position X="7.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAAAAAAQAAAAAAAAAAAAAAACAAAAAgAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\HealthBar\Stat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAQAAAAiAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Assets.Scripts.IObjectFactory" Collapsed="true">
-    <Position X="7.25" Y="9.5" Width="1.5" />
+    <Position X="7.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAiAAAAAAAAEAAAABAAAAAQAAQAABAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IObjectFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Assets.Scripts.Player.Bullets.IBullet" Collapsed="true">
-    <Position X="2" Y="9.5" Width="1.5" />
+    <Position X="2.25" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IBullet.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Assets.Scripts.Interfaces.IEnemy" Collapsed="true">
-    <Position X="3.75" Y="9.5" Width="1.5" />
+    <Position X="4" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IEnemy.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Assets.Scripts.Interfaces.IGameObject" Collapsed="true">
-    <Position X="5.5" Y="9.5" Width="1.5" />
+    <Position X="5.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAACIABAAAAAAACAAAAAAAAAEAAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IGameObject.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Assets.Scripts.Interfaces.IPlayer" Collapsed="true">
-    <Position X="2" Y="10.25" Width="1.5" />
+    <Position X="2.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Interfaces\IPlayer.cs</FileName>

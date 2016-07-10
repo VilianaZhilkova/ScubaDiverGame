@@ -20,6 +20,6 @@ The following team members were randomly chosen to participate in the team proje
 Following a team meeting, all team members agreed to fulfill the team project requirements by creating a scuba diver game. The player controls a scuba diver, who swims on the bottom of the ocean, by pressing either the arrow keys or WASD keys. In addition, the player is able to shoot at enemies using the space bar. The main goal of the scuba diver is to shoot or avoid enemies, which are randomly generated sea creatures (fish, squid, piranhas, etc.). The upper-left corner displays the health bar and in the middle one can see his progress in the game. If the scuba diver survives, he meets the boss for a final battle.
 
 ### Class diagram
-
+<img align="center" src="resources/Diagram2.png"> 
 ### URL to repository
 [**Link to GitHub repository**](https://github.com/TeamCyrax/ScubaDiverGame)
