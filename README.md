@@ -17,7 +17,7 @@ The following team members were randomly chosen to participate in the team proje
 | Milena Sapunova  | *milena.aleksandrova*|
 
 ### Project Purpose:
-Following a team meeting, all team members agreed to fulfill the team project requirements by creating a scuba diver game. The player controls a scuba diver, who swims on the bottom of the ocean, by pressing either the arrow keys or WASD keys. In addition, the player is able to shoot at enemies, by using the space bar. The main goal of scuba diver is to shoot or avoid enemies, which are randomly generated sea creatures (fish, squid, piranhas, etc.). The upper-left corner displays the health bar and in the middle one can see the his progress in the game. If the scuba diver survives, he meets the boss for a final battle.
+Following a team meeting, all team members agreed to fulfill the team project requirements by creating a scuba diver game. The player controls a scuba diver, who swims on the bottom of the ocean, by pressing either the arrow keys or WASD keys. In addition, the player is able to shoot at enemies using the space bar. The main goal of the scuba diver is to shoot or avoid enemies, which are randomly generated sea creatures (fish, squid, piranhas, etc.). The upper-left corner displays the health bar and in the middle one can see his progress in the game. If the scuba diver survives, he meets the boss for a final battle.
 
 ### Class diagram
 

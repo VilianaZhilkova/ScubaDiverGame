@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
-using Assets.Scripts;
-using System;
 using Assets.Scripts.Interfaces;
-using System.Collections;
-using Assets.Scripts.GameObjects;
+using Assets.Scripts.Exceptions;
 
 namespace Assets.Scripts.Player
 {
@@ -14,7 +11,7 @@ namespace Assets.Scripts.Player
         private float movementSpeed = 1;
         private float maxX = 7.4f;
         private float minX = -3.9f;
-        private float maxY = 3.1f;
+        private float maxY = 2.0f; //3.1f; - changed due to health and progress bars
         private float minY = -3.1f;
         private bool facingRight;
         private bool didPressSpace;
@@ -33,12 +30,13 @@ namespace Assets.Scripts.Player
         }
 
         //read input / change graphics
-        public void Update()
+        private void Update()
         {
-
+            //change location
             float[] horizontalAndVertical = GetHorizontalAndVertical();
             Move(movementSpeed, horizontalAndVertical[0], horizontalAndVertical[1]);
             Flip(horizontalAndVertical[0]);
+
             didPressSpace = Input.GetButtonDown("Jump");
             if (didPressSpace)
             {
@@ -53,22 +51,29 @@ namespace Assets.Scripts.Player
             this.transform.Translate(speed * Time.deltaTime * horizontal, 0, 0);
             this.transform.Translate(0, speed * Time.deltaTime * vertical, 0);
 
-            if (this.transform.position.x > maxX)
+            try
             {
-                this.transform.position = new Vector3(maxX, transform.position.y, transform.position.z);
+                CheckLocation();
             }
-            else if (this.transform.position.x < minX)
+            catch (ObjectOutOfScreenException ex)
             {
-                this.transform.position = new Vector3(minX, transform.position.y, transform.position.z);
-            }
+                if (ex.IsMaxX)
+                {
+                    this.transform.position = new Vector3(maxX, transform.position.y, transform.position.z);
+                }
+                else if (ex.IsMinX)
+                {
+                    this.transform.position = new Vector3(minX, transform.position.y, transform.position.z);
+                }
 
-            if (this.transform.position.y > maxY)
-            {
-                this.transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
-            }
-            else if (this.transform.position.y < minY)
-            {
-                this.transform.position = new Vector3(transform.position.x, minY, transform.position.z);
+                if (ex.IsMaxY)
+                {
+                    this.transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
+                }
+                else if (ex.IsMinY)
+                {
+                    this.transform.position = new Vector3(transform.position.x, minY, transform.position.z);
+                }
             }
         }
 
@@ -90,7 +95,20 @@ namespace Assets.Scripts.Player
             return new float[] { horizontal, vertical };
         }
 
+        private void CheckLocation()
+        {
 
+            if (this.transform.position.x < minX || this.transform.position.x > maxX || 
+                this.transform.position.y < minY || this.transform.position.y > maxY)
+            {
+                throw new ObjectOutOfScreenException(message: "Player is getting outside of the screen.",
+                    minX: this.transform.position.x < minX,
+                    maxX: this.transform.position.x > maxX,
+                    minY: this.transform.position.y < minY,
+                    maxY: this.transform.position.y > maxY);
+
+            }
+        }
 
 
     }

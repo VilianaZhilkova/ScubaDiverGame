@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Assets.Scripts.Interfaces;
-using Assets.Scripts.Player;
 using Assets.Scripts.Player.Bullets;
 using UnityEngine;
 
@@ -39,11 +35,11 @@ namespace Assets.Scripts
             return new SpecialBullet(Instantiate(specialBullet, pos, new Quaternion()) as GameObject);
         }
 
-        //Enemies Creaation
+        //Enemies Creation
         public static IEnemy CreateRandomFish()
         {
             var fishRNG = rand.Next(0, 3);
-            var temp = new Fish(Instantiate(fishEnemies[fishRNG]) as GameObject);
+            Enemy temp = new Fish(Instantiate(fishEnemies[fishRNG]) as GameObject);
             return temp;
         }
         public static IEnemy FirstAttack()

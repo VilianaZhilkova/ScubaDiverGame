@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 using Assets.Scripts.Player;
 
@@ -36,7 +35,7 @@ public class PlayerHealth : MonoBehaviour {
             var player = new PlayerController();
             player.Weapon.KillCount = 0;
             //TODO end game
-            Debug.Log("Game ended....");
+            //Debug.Log("Game ended....");
             SceneManager.LoadScene("GameOver");
         }
     }

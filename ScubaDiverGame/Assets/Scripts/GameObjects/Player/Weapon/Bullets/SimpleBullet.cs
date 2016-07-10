@@ -30,7 +30,7 @@ namespace Assets.Scripts.Player.Bullets
             if (col.tag == "Enemy")
             {
                 this.KillCount += 1;
-                Debug.Log("Kill Count: "+this.KillCount);
+                //Debug.Log("Kill Count: "+this.KillCount);
                 this.Speed = 0;
                 this.gameObject.GetComponent<Animator>().SetBool("didExplode", true);
                 col.SendMessage("ApplyDamage", dmg);
