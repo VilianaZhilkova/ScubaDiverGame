@@ -4,13 +4,15 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using Assets.Scripts.Enumerations;
 
 namespace Assets.Scripts.Fishes
 {
     public class UrchinFish : Fish
     {
         //Fields
-        private static float moveSpeed = 0.04f;
+        //private static float moveSpeed = 0.04f;  UrchinFishMoveSpeed = 4 //0.04f;
+        public float moveSpeed;
         private int angryNumber;
 
         //Constructor
@@ -21,7 +23,10 @@ namespace Assets.Scripts.Fishes
         //Properties
         public float MoveSpeed
         {
-            get { return moveSpeed; }
+            get
+            {
+                return ((float)FishesMoveSpeed.UrchinFishMoveSpeed) / 100;
+            }
         }
        
         //UnityMethods

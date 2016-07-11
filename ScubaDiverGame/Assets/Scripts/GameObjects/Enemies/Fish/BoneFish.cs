@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Assets.Scripts.Enumerations;
 
 namespace Assets.Scripts.Fishes
 {
@@ -6,7 +7,9 @@ namespace Assets.Scripts.Fishes
     {
         //Fields
         //TODO: MAKE PRIVATECONST!;
-        private const float moveSpeed = 0.08f;
+        //private const float moveSpeed = 0.08f;
+
+        private float moveSpeed;
 
         //Constructor
         public BoneFish(GameObject obj) : base(obj)
@@ -17,7 +20,10 @@ namespace Assets.Scripts.Fishes
         //Properties
         public float MoveSpeed
         {
-            get { return moveSpeed; }
+            get
+            {
+                return ((float)FishesMoveSpeed.BoneFishMoveSpeed )/ 100;
+            }
         }
 
         //Methods
